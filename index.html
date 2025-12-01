@@ -60,15 +60,29 @@
     }
     .frame-wrap {
       border-radius: 16px;
-      overflow: hidden;
+      margin-top: 32px;
+      padding: 40px;
+      text-align: center;
       border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.65);
       background: #050814;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.65);
     }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
+    .launch-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: 0.2s ease-in-out;
+    }
+    .launch-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 34px rgba(0,0,0,0.6);
     }
     footer {
       text-align: center;
@@ -78,11 +92,11 @@
     }
     @media (max-width: 700px) {
       .hero-title { font-size: 1.5rem; }
-      iframe { height: 550px; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Nexo.corp</div>
     <div class="badge">AI Chatbot • Beta</div>
@@ -103,12 +117,17 @@
     </div>
 
     <div class="frame-wrap">
-      <!-- CHANGE THE src BELOW TO YOUR REAL SPACE URL -->
-      <iframe
-        src="https://hf.space/embed/Devxrp/aiii/+/"
-        title="Nexo.corp AI Chatbot"
-        allow="clipboard-read; clipboard-write; microphone">
-      </iframe>
+      <p style="margin-bottom: 16px; opacity: 0.85;">
+        Click below to open the Nexo.corp AI Chatbot.
+      </p>
+
+      <!-- BUTTON THAT OPENS YOUR HF CHATBOT -->
+      <a 
+        href="https://huggingface.co/spaces/Devxrp/aiii"
+        target="_blank"
+        class="launch-btn">
+        🚀 Launch NexoBot
+      </a>
     </div>
   </main>
 
@@ -119,6 +138,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
-
